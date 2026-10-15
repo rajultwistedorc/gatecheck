@@ -1,0 +1,46 @@
+{
+  "gates": [
+    {
+      "id": "general-entry",
+      "name": "General Entry",
+      "description": "Main entrance. Valid ID matched to a ticket.",
+      "profile": "id-check",
+      "rules": [{ "type": "ticket" }],
+      "fallback": {
+        "profile": "age-check",
+        "notice": "Age check only",
+        "description": "Main entrance. No ID-check profile is configured, so this gate checks age only and cannot match tickets.",
+        "rules": [{ "type": "age", "minAge": 21 }]
+      }
+    },
+    {
+      "id": "beer-garden",
+      "name": "Beer Garden",
+      "description": "Age-restricted area. 21 and over.",
+      "profile": "age-check",
+      "rules": [{ "type": "age", "minAge": 21 }]
+    },
+    {
+      "id": "concession",
+      "name": "Concession Stand",
+      "description": "Alcohol sales. 21 and over.",
+      "profile": "age-check",
+      "rules": [{ "type": "age", "minAge": 21 }]
+    },
+    {
+      "id": "vip",
+      "name": "Staff and VIP",
+      "description": "Backstage. Allow-list only.",
+      "profile": "id-check",
+      "rules": [
+        {
+          "type": "allowlist",
+          "entries": [
+            { "documentNumber": "D1000001", "label": "VIP guest" },
+            { "familyName": "Park", "givenName": "Jordan", "birthDate": "1992-08-30", "label": "Crew" }
+          ]
+        }
+      ]
+    }
+  ]
+}

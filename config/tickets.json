@@ -1,0 +1,7 @@
+{
+  "tickets": [
+    { "ticketId": "TKT-0001", "tier": "General Admission", "documentNumber": "D1000001" },
+    { "ticketId": "TKT-0002", "tier": "General Admission", "documentNumber": "D1000002" },
+    { "ticketId": "TKT-0003", "tier": "Balcony", "familyName": "Park", "givenName": "Jordan", "birthDate": "1992-08-30" }
+  ]
+}

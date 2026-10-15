@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+
+# Secrets: never commit. Use .env.example as the template.
+.env
+.env.*
+!.env.example
+
+# Entry log database
+data/*
+!data/.gitkeep
+
+*.log
+.DS_Store
+.vite/
